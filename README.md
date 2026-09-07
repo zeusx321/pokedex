@@ -1,56 +1,126 @@
-# Welcome to your Expo app 👋
+# 🧢 Pokédex
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A clean and responsive **Pokédex mobile application** built with **React Native + Expo**, allowing users to browse Pokémon, search by name, and view detailed information for each Pokémon.
 
-## Get started
+The app consumes data from **PokéAPI** and uses **Expo Router** for navigation with a simple, modern UI inspired by the Pokédex experience.
 
-1. Install dependencies
+## ✨ Features
 
-   ```bash
-   npm install
-   ```
+* 🔎 **Search Pokémon** by name
+* 📋 Browse the first **20 Pokémon** from the National Pokédex
+* 🖼️ Display high-quality official Pokémon artwork
+* 🔢 Show formatted National Pokédex numbers
+* 🎨 Dynamic card colors based on Pokémon type
+* 📖 Pokémon details screen with species description
+* ↩️ Navigate between the Pokémon list and details screen
+* 📱 Built with React Native and Expo
+* 🌐 Run the project on Android, iOS, or Web through Expo
 
-2. Start the app
+## 🛠️ Tech Stack
 
-   ```bash
-   npx expo start
-   ```
+| Technology              | Purpose                              |
+| ----------------------- | ------------------------------------ |
+| **React Native**        | Mobile application UI                |
+| **Expo**                | React Native development platform    |
+| **Expo Router**         | File-based navigation                |
+| **TypeScript**          | Type-safe development                |
+| **NativeWind**          | Utility-first styling                |
+| **Tailwind CSS**        | Styling system                       |
+| **Lucide React Native** | UI icons                             |
+| **PokéAPI**             | Pokémon data and species information |
 
-In the output, you'll find options to open the app in a
+## 🧩 How It Works
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Pokémon List
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+The home screen fetches Pokémon data from PokéAPI and retrieves detailed information for each Pokémon. The current implementation loads the first 20 Pokémon and displays their name, artwork, and National Pokédex number.
 
-## Get a fresh project
+### Search
 
-When you're ready, run:
+The search field filters the loaded Pokémon in real time, allowing users to quickly find a Pokémon by name.
 
-```bash
-npm run reset-project
+### Pokémon Details
+
+Selecting a Pokémon opens a dedicated details screen using Expo Router. The details page fetches the Pokémon's species information and displays its English Pokédex description.
+
+## 📁 Project Structure
+
+```text
+pokedex/
+├── assets/
+├── src/
+│   └── app/
+│       ├── _layout.tsx       # App navigation/layout
+│       ├── index.tsx         # Pokémon list & search
+│       └── details.tsx       # Pokémon details screen
+├── global.css                # Global styles
+├── app.json                  # Expo configuration
+├── metro.config.js           # Metro configuration
+├── nativewind-env.d.ts       # NativeWind TypeScript types
+├── package.json
+├── postcss.config.mjs
+├── tsconfig.json
+└── README.md
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🚀 Getting Started
 
-### Other setup steps
+### 1. Clone the repository
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+```bash
+git clone https://github.com/zeusx321/pokedex.git
+cd pokedex
+```
 
-## Learn more
+### 2. Install dependencies
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+npm install
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### 3. Start the development server
 
-## Join the community
+```bash
+npx expo start
+```
 
-Join our community of developers creating universal apps.
+### 4. Run the application
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+After starting Expo, you can open the project using:
+
+* 📱 **Expo Go** on a physical device
+* 🤖 **Android Emulator**
+* 🍎 **iOS Simulator**
+* 🌐 **Web Browser**
+
+### Available Scripts
+
+| Command           | Description                       |
+| ----------------- | --------------------------------- |
+| `npm start`       | Start the Expo development server |
+| `npm run android` | Start the project on Android      |
+| `npm run ios`     | Start the project on iOS          |
+| `npm run web`     | Start the web version             |
+| `npm run lint`    | Run Expo linting                  |
+
+## 🔌 API
+
+This project uses **PokéAPI** to retrieve Pokémon and species data.
+
+```text
+https://pokeapi.co/api/v2/pokemon
+```
+
+The application uses Pokémon endpoints for the list and detailed Pokémon information, and the species endpoint for Pokédex descriptions.
+
+## 🎨 UI & Design
+
+The interface uses a soft, card-based design with colors that adapt to the Pokémon's primary type. The details screen follows the same visual language for a consistent experience.
+
+---
+
+<div align="center">
+
+Made with ❤️ using React Native & Expo
+
+</div>
